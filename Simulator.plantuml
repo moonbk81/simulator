@@ -1,0 +1,772 @@
+@startuml
+
+title __SIMULATOR's Class Diagram__\n
+
+  package  {
+    package simulator.model {
+      abstract class AbstractComponent {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      abstract class AbstractComponent {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class Adapter {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class Adapter {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class AdapterManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class AdapterManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class AdministrationManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class AdministrationManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class AlarmAlertComponent {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class AlarmAlertComponent {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class ArchitectureDescription {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class ArchitectureDescription {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class Component {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class Component {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class ComponentManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class ComponentManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class Event {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class Event {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class EventManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class EventManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class ExecutionManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class ExecutionManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      package simulator.control.interfaces {
+        interface IAdapterManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      interface IAdapterManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      package simulator.control.interfaces {
+        interface IAdministrationManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      interface IAdministrationManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      interface IComponentAction {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      interface IComponentAction {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      package simulator.control.interfaces {
+        interface IComponentManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      interface IComponentManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      package simulator.control.interfaces {
+        interface IEventManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      interface IEventManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      package simulator.control.interfaces {
+        interface IExecutionManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      interface IExecutionManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      package simulator.control.interfaces {
+        interface IQualityManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      interface IQualityManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      interface IServiceManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      package simulator.control.interfaces {
+        interface IServiceManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      package simulator.control.interfaces {
+        interface ISimulationManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      interface ISimulationManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      interface ISourceManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      package simulator.control.interfaces {
+        interface ISourceManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      package simulator.control.interfaces {
+        interface ISystemManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      interface ISystemManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      package simulator.control.interfaces {
+        interface IUserManager {
+        }
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      interface IUserManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class MakeEmergencyCallComponent {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class MakeEmergencyCallComponent {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class Profile {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class Profile {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class QualityManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class QualityManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class SendTextAlertComponent {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class SendTextAlertComponent {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class Service {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class Service {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class ServiceManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class ServiceManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class SimulationManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class SimulationManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class SimulationResult {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class SimulationResult {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class SimulationSession {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class SimulationSession {
+      }
+    }
+  }
+  
+
+  package  {
+    class Simulator {
+    }
+  }
+  
+
+  package  {
+    class Simulator {
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class SimulatorInteractor {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class SimulatorProxy {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class SingleComponent {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class SingleComponent {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class Source {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class Source {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class SourceManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class SourceManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class SystemManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class SystemManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class SystemProfile {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class SystemProfile {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class UserManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.control {
+      class UserManager {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class UserProfile {
+      }
+    }
+  }
+  
+
+  package  {
+    package simulator.model {
+      class UserProfile {
+      }
+    }
+  }
+  
+
+  AbstractComponent -up-|> IComponentAction
+  AbstractComponent o-- IComponentAction : action
+  AbstractComponent -up-|> IComponentAction
+  AbstractComponent o-- IComponentAction : action
+  Adapter -up-|> Profile
+  Adapter -up-|> Profile
+  AdapterManager -up-|> IAdapterManager
+  AdapterManager o-- SimulatorProxy : proxy
+  AdapterManager -up-|> IAdapterManager
+  AdministrationManager -up-|> IAdministrationManager
+  AdministrationManager o-- SimulatorProxy : proxy
+  AdministrationManager -up-|> IAdministrationManager
+  AlarmAlertComponent -up-|> AbstractComponent
+  AlarmAlertComponent -up-|> AbstractComponent
+  ArchitectureDescription o-- Source : source
+  ArchitectureDescription o-- Adapter : adapter
+  ArchitectureDescription o-- Event : event
+  ArchitectureDescription o-- Service : service
+  ArchitectureDescription o-- Component : component
+  ArchitectureDescription o-- Source : source
+  ArchitectureDescription o-- Adapter : adapter
+  ArchitectureDescription o-- Event : event
+  ArchitectureDescription o-- Service : service
+  ArchitectureDescription o-- Component : component
+  Component -up-|> Profile
+  Component o-- IComponentAction : componentAction
+  Component -up-|> Profile
+  Component o-- IComponentAction : componentAction
+  ComponentManager -up-|> IComponentManager
+  ComponentManager o-- SimulatorProxy : interactor
+  ComponentManager -up-|> IComponentManager
+  Event -up-|> Profile
+  Event -up-|> Profile
+  EventManager -up-|> IEventManager
+  EventManager o-- SimulatorProxy : proxy
+  EventManager -up-|> IEventManager
+  ExecutionManager -up-|> IExecutionManager
+  ExecutionManager o-- SimulatorProxy : interactor
+  ExecutionManager -up-|> IExecutionManager
+  MakeEmergencyCallComponent -up-|> AbstractComponent
+  MakeEmergencyCallComponent -up-|> AbstractComponent
+  Profile o-- ProfileEnum : type
+  QualityManager -up-|> IQualityManager
+  QualityManager -up-|> IQualityManager
+  QualityManager o-- SimulatorProxy : proxy
+  SendTextAlertComponent -up-|> AbstractComponent
+  SendTextAlertComponent -up-|> AbstractComponent
+  Service -up-|> Profile
+  Service -up-|> Profile
+  ServiceManager -up-|> IServiceManager
+  ServiceManager o-- SimulatorProxy : proxy
+  ServiceManager -up-|> IServiceManager
+  SimulationManager -up-|> ISimulationManager
+  SimulationManager o-- SimulatorProxy : interactor
+  SimulationManager o-- SystemProfile : systemProfile
+  SimulationManager o-- ArchitectureDescription : archDescription
+  SimulationManager -up-|> ISimulationManager
+  SimulationManager o-- SystemProfile : systemProfile
+  SimulationManager o-- ArchitectureDescription : archDescription
+  SimulatorProxy o-- IAdministrationManager : adminManager
+  SimulatorProxy o-- ISystemManager : systemManager
+  SimulatorProxy o-- IUserManager : userManager
+  SimulatorProxy o-- ISourceManager : sourceManager
+  SimulatorProxy o-- IAdapterManager : adapterManager
+  SimulatorProxy o-- IEventManager : eventManager
+  SimulatorProxy o-- IServiceManager : serviceManager
+  SimulatorProxy o-- IComponentManager : componentManager
+  SimulatorProxy o-- ISimulationManager : simulationManager
+  SimulatorProxy o-- IExecutionManager : executionManager
+  SimulatorProxy o-- IQualityManager : qualityManager
+  SingleComponent -up-|> IComponentAction
+  SingleComponent -up-|> IComponentAction
+  Source -up-|> Profile
+  Source -up-|> Profile
+  Source o-- SourceEnum : valueType
+  SourceManager -up-|> ISourceManager
+  SourceManager -up-|> ISourceManager
+  SourceManager o-- SimulatorProxy : interactor
+  SystemManager -up-|> ISystemManager
+  SystemManager -up-|> ISystemManager
+  SystemManager o-- SimulatorProxy : interactor
+  UserManager -up-|> IUserManager
+  UserManager -up-|> IUserManager
+  UserManager o-- SimulatorProxy : interactor
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
