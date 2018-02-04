@@ -40,8 +40,11 @@ public class SourceManager implements ISourceManager {
 	public void registerProfile(int rangeFreq, int regularity, int priority, int valueRange, int valueAvgFreq, int valueType) {
 		Source.SourceEnum convertedSourceType = Source.convertIntegerToSourceEnum(valueType);
 		Source source = new Source(rangeFreq,regularity, priority, valueRange, valueAvgFreq, convertedSourceType);
-		if (sourceProfiles != null) {
-			sourceProfiles.add(source);
-		}
+		registerProfile(source);
+	}
+
+	@Override
+	public List<Source> getSourceProfiles() {
+		return sourceProfiles;
 	}
 }

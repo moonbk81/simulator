@@ -51,6 +51,21 @@ public class SimulatorCmdUI {
                 case 9:
                     retrieve("system");
                     break;
+                case 10:
+                    retrieve("source");
+                    break;
+                case 11:
+                    retrieve("adapter");
+                    break;
+                case 12:
+                    retrieve("event");
+                    break;
+                case 13:
+                    retrieve("service");
+                    break;
+                case 14:
+                    retrieve("component");
+                    break;
                 default:
                     break;
             }
@@ -59,17 +74,23 @@ public class SimulatorCmdUI {
     }
 
     public void retrieve(String object) {
+        System.out.println("Retrieve " + object + " profile");
         if (object.equals("user")) {
-            System.out.println("Retrieve user profile");
-
             System.out.print(proxy.retrieveUserProfiles());
-            System.out.println("End of list");
         } else if (object.equals("system")) {
-            System.out.println("Retrieve system profiles");
-
             System.out.print(proxy.retrieveSystemProfiles());
-            System.out.println("End of list");
+        } else if (object.equals("source")) {
+            System.out.println(proxy.retrieveSourceProfiles());
+        } else if (object.equals("adapter")) {
+            System.out.println(proxy.retrieveAdapterProfiles());
+        } else if (object.equals("event")) {
+            System.out.println(proxy.retrieveEventProfiles());
+        } else if (object.equals("service")) {
+            System.out.println(proxy.retrieveServiceProfiles());
+        } else if (object.equals("component")) {
+            System.out.println(proxy.retrieveComponentProfiles());
         }
+        System.out.println("End of list");
     }
 
     public void register(String type) {
@@ -155,6 +176,10 @@ public class SimulatorCmdUI {
         System.out.println("\t 8. Retrieve User Profile");
         System.out.println("\t 9. Retrieve System Profiles");
         System.out.println("\t 10. Retrieve Source Profiles");
+        System.out.println("\t 11. Retrieve Adapter Profiles");
+        System.out.println("\t 12. Retrieve Event Profiles");
+        System.out.println("\t 13. Retrieve Service Profiles");
+        System.out.println("\t 14. Retrieve Component Profiles");
 
         int command = scanner.nextInt();
 

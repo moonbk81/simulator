@@ -162,4 +162,39 @@ public class SimulatorProxy {
 
 		return sb.toString();
 	}
+
+    public String retrieveSourceProfiles() {
+		StringBuilder sb = new StringBuilder();
+		List<Source> sources = sourceManager.getSourceProfiles();
+
+		for (Source source : sources) {
+			sb.append(
+					"Source value type: " + source.getValueType() +
+							"\tvalue range: " + source.getValueRange() +
+							"\tvalue average frequency: " + source.getValueAvgFreq() +
+							"\tpriority: " + source.getPriority() +
+							"\tregularity of frequency: " + source.getRegularityOfFrequency() +
+							"\trange frequency: " + source.getRangeFrequency() +
+							"\r\n"
+			);
+		}
+
+		return sb.toString();
+	}
+
+	public String retrieveAdapterProfiles() {
+		return "";
+	}
+
+	public String retrieveEventProfiles() {
+		return "";
+	}
+
+	public String retrieveServiceProfiles() {
+		return "";
+	}
+
+	public String retrieveComponentProfiles() {
+		return "";
+	}
 }
