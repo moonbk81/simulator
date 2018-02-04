@@ -39,4 +39,9 @@ public class ComponentManager implements IComponentManager {
 		}
 		return component;
 	}
+
+	@Override
+	public List<Component> getComponentProfiles() {
+		return componentProfiles;
+	}
 }

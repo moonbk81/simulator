@@ -9,7 +9,7 @@ public class ServiceManager implements IServiceManager {
 	private SimulatorProxy proxy;
 
 	public ServiceManager(SimulatorProxy si) {
-		serviceProfiles = new ArrayList<Service>();
+		serviceProfiles = new ArrayList<>();
 		this.proxy = si;
 	}
 
@@ -38,5 +38,10 @@ public class ServiceManager implements IServiceManager {
 			service = serviceProfiles.get(index);
 		}
 		return service;
+	}
+
+	@Override
+	public List<Service> getServiceProfiles() {
+		return serviceProfiles;
 	}
 }

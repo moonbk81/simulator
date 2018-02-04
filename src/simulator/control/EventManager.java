@@ -39,4 +39,9 @@ public class EventManager implements IEventManager {
 		}
 		return event;
 	}
+
+	@Override
+	public List<Event> getEventProfiles() {
+		return eventProfiles;
+	}
 }

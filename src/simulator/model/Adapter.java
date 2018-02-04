@@ -14,6 +14,30 @@ public class Adapter extends Profile {
         this.memoryConsumption = memoryConsumption;
     }
 
+    public int getSourceType() {
+        return sourceType;
+    }
+
+    public void setSourceType(int sourceType) {
+        this.sourceType = sourceType;
+    }
+
+    public int getComplexity() {
+        return complexity;
+    }
+
+    public void setComplexity(int complexity) {
+        this.complexity = complexity;
+    }
+
+    public int getMemoryConsumption() {
+        return memoryConsumption;
+    }
+
+    public void setMemoryConsumption(int memoryConsumption) {
+        this.memoryConsumption = memoryConsumption;
+    }
+
     public interface IAdapter {
         public String getName();
     }

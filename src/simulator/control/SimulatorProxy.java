@@ -183,18 +183,63 @@ public class SimulatorProxy {
 	}
 
 	public String retrieveAdapterProfiles() {
-		return "";
+		StringBuilder sb = new StringBuilder();
+		List<Adapter> adapters = adapterManager.getAdapterProfiles();
+
+		for (Adapter adapter : adapters) {
+			sb.append(
+					"Adapter complexity: " + adapter.getComplexity() +
+							"\tmemory consumption: " + adapter.getMemoryConsumption() +
+							"\tadapter source type: " + adapter.getSourceType() +
+							"\r\n"
+			);
+		}
+		return sb.toString();
 	}
 
 	public String retrieveEventProfiles() {
-		return "";
+		StringBuilder sb = new StringBuilder();
+		List<Event> events = eventManager.getEventProfiles();
+
+		for (Event event : events) {
+			sb.append(
+					"Event id: " + event.getEventId() +
+							"\tEvent condition: " + event.isEventCondition() +
+							"\r\n"
+			);
+		}
+		return sb.toString();
 	}
 
 	public String retrieveServiceProfiles() {
-		return "";
+		StringBuilder sb = new StringBuilder();
+		List<Service> services = serviceManager.getServiceProfiles();
+
+		for (Service service : services) {
+			sb.append(
+					"Service event id: " + service.getEventId() +
+                            "\tservice components: ");
+			for (Component component : service.getComponents()) {
+                sb.append(component.getComponent() + ", ");
+            }
+			sb.append("\r\n");
+		}
+		return sb.toString();
 	}
 
 	public String retrieveComponentProfiles() {
-		return "";
+	    StringBuilder sb = new StringBuilder();
+	    List<Component> components = componentManager.getComponentProfiles();
+
+	    for (Component component : components) {
+            sb.append(
+                    "Component complexity: " + component.getComplexity() +
+                            "\tcomplexity range: " + component.getComplexityRange() +
+                            "\tmemory consumption: " + component.getMemoryResource() +
+                            "\tmemory consumption range: " + component.getMemoryRange() +
+                            "\r\n"
+            );
+        }
+		return sb.toString();
 	}
 }

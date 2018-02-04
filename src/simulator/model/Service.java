@@ -3,11 +3,11 @@ package simulator.model;
 import java.util.*;
 
 public class Service extends Profile {
-	private ArrayList<Component> components = null;
+	private ArrayList<Component> components;
 	private int eventId;
 	
     public Service() {
-    	components = new ArrayList<Component>();
+    	components = new ArrayList<>();
 		eventId = -1;
     }
     
@@ -31,6 +31,8 @@ public class Service extends Profile {
 	public void setEventId(int eventId) {
 		this.eventId = eventId;
 	}
-   
 
+	public ArrayList<Component> getComponents() {
+		return components;
+	}
 }

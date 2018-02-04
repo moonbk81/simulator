@@ -12,10 +12,14 @@ public class SimulatorCmdUI {
     public SimulatorCmdUI(SimulatorProxy proxy) {
         super();
         this.proxy = proxy;
+        generateSampleData();
+    }
+
+    private void generateSampleData() {
+
     }
 
     public void start() {
-
         boolean quit = false;
 
         while (!quit) {

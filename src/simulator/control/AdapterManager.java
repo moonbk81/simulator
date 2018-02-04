@@ -38,4 +38,9 @@ public class AdapterManager implements IAdapterManager {
 		}
 		return adapter;
 	}
+
+	@Override
+	public List<Adapter> getAdapterProfiles() {
+		return adapterProfiles;
+	}
 }
