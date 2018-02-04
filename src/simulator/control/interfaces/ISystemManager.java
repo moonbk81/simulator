@@ -13,4 +13,6 @@ public interface ISystemManager {
     void registerProfile(String name, int id, int core, int maxCapa);
 
     List<SystemProfile> getSystemProfiles();
+
+    void registerProfile(SystemProfile sysProfile);
 }

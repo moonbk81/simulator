@@ -11,4 +11,6 @@ public interface ISourceManager {
     void registerProfile(int rangeFreq, int regularity, int priority, int valueRange, int valueAvgFreq, int valueType);
 
     List<Source> getSourceProfiles();
+
+    void registerProfile(Source profile);
 }

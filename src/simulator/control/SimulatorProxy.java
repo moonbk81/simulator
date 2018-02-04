@@ -1,14 +1,12 @@
 package simulator.control;
 import simulator.control.interfaces.*;
-import simulator.model.Adapter;
-import simulator.model.Component;
-import simulator.model.Event;
-import simulator.model.Service;
-import simulator.model.Source;
-import simulator.model.SystemProfile;
-import simulator.model.UserProfile;
+import simulator.model.*;
 
 import java.util.List;
+
+import static simulator.model.Source.SourceEnum.SOURCE_TYPE_FIRE_ALARM;
+import static simulator.model.Source.SourceEnum.SOURCE_TYPE_USER;
+import static simulator.model.Source.SourceEnum.SOURCE_TYPE_WINDOW_ALARM;
 
 
 public class SimulatorProxy {
@@ -242,4 +240,69 @@ public class SimulatorProxy {
         }
 		return sb.toString();
 	}
+
+    public void generateSampleData() {
+        UserProfile profile = new UserProfile("moonbk81", "bongki", "bongki81@gmail.com", "010-7260-8683", "1234");
+        userManager.registerProfile(profile);
+        profile = new UserProfile("mooncw12", "chaewon", "chaewon12@gmail.com", "010-5166-4725", "1234");
+        userManager.registerProfile(profile);
+
+        // generate system profile
+        SystemProfile sysProfile = new SystemProfile("Fire Alarm System", 1, 4, 8192, 1);
+        systemManager.registerProfile(sysProfile);
+        sysProfile = new SystemProfile("Window Alarm System", 2, 4, 4096, 1);
+        systemManager.registerProfile(sysProfile);
+        sysProfile = new SystemProfile("User Alarm System", 3, 4, 4096, 1);
+        systemManager.registerProfile(sysProfile);
+
+        // generate source profiles
+        Source srcProfile = new Source(10, 1, 5, 30, 10, SOURCE_TYPE_FIRE_ALARM);
+        sourceManager.registerProfile(srcProfile);
+        srcProfile = new Source(20, 1, 5, 100, 10, SOURCE_TYPE_WINDOW_ALARM);
+        sourceManager.registerProfile(srcProfile);
+        srcProfile = new Source(15, 0, 9, 100, 10, SOURCE_TYPE_USER);
+        sourceManager.registerProfile(srcProfile);
+
+        // generate adapter profiles
+        Adapter adapterProfile = new Adapter(SOURCE_TYPE_FIRE_ALARM, 150, 256);
+        adapterManager.registerProfile(adapterProfile);
+        adapterProfile = new Adapter(SOURCE_TYPE_WINDOW_ALARM, 120, 128);
+        adapterManager.registerProfile(adapterProfile);
+        adapterProfile = new Adapter(SOURCE_TYPE_USER, 180, 512);
+        adapterManager.registerProfile(adapterProfile);
+
+        // generate event profiles
+        Event eventProfile = new Event(Event.EVENT_ID_FIRE_EVENT, false);
+        eventManager.registerProfile(eventProfile);
+        eventProfile = new Event(Event.EVENT_ID_WINDOWN_EVENT, false);
+        eventManager.registerProfile(eventProfile);
+        eventProfile = new Event(Event.EVENT_ID_USER_EVENT, false);
+        eventManager.registerProfile(eventProfile);
+
+        // generate component profiles
+        IComponentAction componentAction = new SendTextAlertComponent(
+                new MakeEmergencyCallComponent(
+                        new SingleComponent()));
+
+        Component component = new Component(120, 10, 10, 200, componentAction);
+        componentManager.registerProfile(component);
+
+        componentAction = new SendTextAlertComponent(
+                new MakeEmergencyCallComponent(
+                        new AlarmAlertComponent(
+                                new SingleComponent())));
+        component = new Component(100, 20, 10, 180, componentAction);
+        componentManager.registerProfile(component);
+
+        componentAction = new AlarmAlertComponent(
+                new SingleComponent());
+        component = new Component(50, 10, 15, 150, componentAction);
+        componentManager.registerProfile(component);
+
+        // generate service profiles
+        Service service = new Service(Event.EVENT_ID_FIRE_EVENT, componentManager.retrieveProfile(0));
+
+
+
+    }
 }

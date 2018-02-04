@@ -1,24 +1,26 @@
 package simulator.model;
 
+import simulator.model.Source.SourceEnum;
+
 public class Adapter extends Profile {
-    private int sourceType;
+    private SourceEnum sourceType;
     private int complexity;
     private int memoryConsumption;
 
     public Adapter() {
     }
 
-    public Adapter(int sourceType, int complexity, int memoryConsumption) {
+    public Adapter(SourceEnum sourceType, int complexity, int memoryConsumption) {
         this.sourceType = sourceType;
         this.complexity = complexity;
         this.memoryConsumption = memoryConsumption;
     }
 
-    public int getSourceType() {
+    public SourceEnum getSourceType() {
         return sourceType;
     }
 
-    public void setSourceType(int sourceType) {
+    public void setSourceType(SourceEnum sourceType) {
         this.sourceType = sourceType;
     }
 

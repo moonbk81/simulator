@@ -15,10 +15,16 @@ public class SystemManager implements ISystemManager {
 
 	public void registerProfile(String name, int id, int coreNum, int maxCapa) {
 		SystemProfile profile = new SystemProfile(name, id, coreNum, maxCapa, 1);
+		registerProfile(profile);
+	}
+
+	@Override
+	public void registerProfile(SystemProfile sysProfile) {
 		if (systemProfiles != null) {
-			systemProfiles.add(profile);
+			systemProfiles.add(sysProfile);
 		}
 	}
+
 	public void deleteProfile(int index) {
 		if (systemProfiles != null && !systemProfiles.isEmpty()) {
 			systemProfiles.remove(index);

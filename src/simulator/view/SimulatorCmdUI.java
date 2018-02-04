@@ -2,7 +2,6 @@ package simulator.view;
 
 import simulator.control.SimulatorProxy;
 
-
 import java.util.Scanner;
 
 public class SimulatorCmdUI {
@@ -12,11 +11,7 @@ public class SimulatorCmdUI {
     public SimulatorCmdUI(SimulatorProxy proxy) {
         super();
         this.proxy = proxy;
-        generateSampleData();
-    }
-
-    private void generateSampleData() {
-
+        proxy.generateSampleData();
     }
 
     public void start() {
