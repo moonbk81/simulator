@@ -4,6 +4,9 @@ import simulator.model.*;
 
 import java.util.List;
 
+import static simulator.model.Event.EVENT_ID_FIRE_EVENT;
+import static simulator.model.Event.EVENT_ID_USER_EVENT;
+import static simulator.model.Event.EVENT_ID_WINDOWN_EVENT;
 import static simulator.model.Source.SourceEnum.SOURCE_TYPE_FIRE_ALARM;
 import static simulator.model.Source.SourceEnum.SOURCE_TYPE_USER;
 import static simulator.model.Source.SourceEnum.SOURCE_TYPE_WINDOW_ALARM;
@@ -272,11 +275,11 @@ public class SimulatorProxy {
         adapterManager.registerProfile(adapterProfile);
 
         // generate event profiles
-        Event eventProfile = new Event(Event.EVENT_ID_FIRE_EVENT, false);
+        Event eventProfile = new Event(EVENT_ID_FIRE_EVENT, false);
         eventManager.registerProfile(eventProfile);
-        eventProfile = new Event(Event.EVENT_ID_WINDOWN_EVENT, false);
+        eventProfile = new Event(EVENT_ID_WINDOWN_EVENT, false);
         eventManager.registerProfile(eventProfile);
-        eventProfile = new Event(Event.EVENT_ID_USER_EVENT, false);
+        eventProfile = new Event(EVENT_ID_USER_EVENT, false);
         eventManager.registerProfile(eventProfile);
 
         // generate component profiles
@@ -300,9 +303,20 @@ public class SimulatorProxy {
         componentManager.registerProfile(component);
 
         // generate service profiles
-        Service service = new Service(Event.EVENT_ID_FIRE_EVENT, componentManager.retrieveProfile(0));
+        Service service = new Service();
+        service.setEventId(EVENT_ID_FIRE_EVENT);
+        service.addComponent(componentManager.retrieveProfile(0));
+        service.addComponent(componentManager.retrieveProfile(2));
 
+        service = new Service();
+        service.setEventId(EVENT_ID_WINDOWN_EVENT);
+        service.addComponent(componentManager.retrieveProfile(1));
+        service.addComponent(componentManager.retrieveProfile(2));
 
-
+        service = new Service();
+        service.setEventId(EVENT_ID_USER_EVENT);
+        service.addComponent(componentManager.retrieveProfile(0));
+        service.addComponent(componentManager.retrieveProfile(1));
+        service.addComponent(componentManager.retrieveProfile(2));
     }
 }

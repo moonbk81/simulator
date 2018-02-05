@@ -19,6 +19,12 @@ public class SimulatorCmdUI {
 
         while (!quit) {
             int command = getMainMenuCommand();
+            ProfileView view;
+            if (command == 0) {
+                quit = true;
+            } else if (command % 7 == 1) {
+                view = new UserView();
+            }
             switch (command) {
                 case 0:
                     quit = true;
@@ -184,4 +190,5 @@ public class SimulatorCmdUI {
 
         return command;
     }
+
 }

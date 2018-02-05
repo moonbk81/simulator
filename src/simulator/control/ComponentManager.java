@@ -35,7 +35,7 @@ public class ComponentManager implements IComponentManager {
 	public Component retrieveProfile(int index) {
 		Component component = null;
 		if (componentProfiles != null && !componentProfiles.isEmpty()) {
-			component = componentProfiles.get(index);
+			return componentProfiles.get(index);
 		}
 		return component;
 	}
