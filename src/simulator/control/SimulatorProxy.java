@@ -193,16 +193,19 @@ public class SimulatorProxy {
         service.setEventId(EVENT_ID_FIRE_EVENT);
         service.addComponent(componentManager.retrieveProfile(0));
         service.addComponent(componentManager.retrieveProfile(2));
+        serviceManager.registerProfile(service);
 
         service = new Service();
         service.setEventId(EVENT_ID_WINDOWN_EVENT);
         service.addComponent(componentManager.retrieveProfile(1));
         service.addComponent(componentManager.retrieveProfile(2));
+		serviceManager.registerProfile(service);
 
         service = new Service();
         service.setEventId(EVENT_ID_USER_EVENT);
         service.addComponent(componentManager.retrieveProfile(0));
         service.addComponent(componentManager.retrieveProfile(1));
         service.addComponent(componentManager.retrieveProfile(2));
+		serviceManager.registerProfile(service);
     }
 }
