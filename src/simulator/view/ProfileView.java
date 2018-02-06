@@ -6,6 +6,9 @@ public abstract class ProfileView {
     protected SimulatorProxy proxy;
     public ProfileView() {
     }
+    public SimulatorProxy getProxy() {
+        return proxy;
+    }
     public abstract void registerCommand();
-    public abstract void retrieveCommand();
+    public abstract String retrieveCommand();
 }
